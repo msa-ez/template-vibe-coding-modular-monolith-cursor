@@ -21,5 +21,11 @@ cd .clinerules
 for file in *.mdc; do mv -- "$file" "${file%.mdc}.md"; done
 ```
 
-3. Generate Code
+4. LLM Prompt Modification
+Execute the command below to consolidate the Metadata from each domain service's PRD.txt into the LLM Prompt:
+```
+cat "LLM Prompt" {{#boundedContexts}}{{#aggregates}}{{nameCamelCase}}/PRD.txt {{/aggregates}}{{/boundedContexts}} > "LLM Prompt.new" && mv "LLM Prompt.new" "LLM Prompt"
+```
+
+5. Generate Code
 Copy and paste the content from **PRD.txt** into the Cursor Prompt Input window to generate your code
