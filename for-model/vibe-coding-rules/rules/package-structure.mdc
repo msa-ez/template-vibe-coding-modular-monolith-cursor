@@ -6,7 +6,7 @@ alwaysApply: true
 Please create the project based on the structure below.
 
 Root Structure (including root POM)
-    {{nameCamelCase}}
+    {{options.package}}
     ├── pom.xml                                         ← Root POM (packaging: pom)
     ├── common-module/                                  ← Common domain library, shared DTOs, exceptions, configurations
     │   └── pom.xml
