@@ -24,7 +24,7 @@ for file in *.mdc; do mv -- "$file" "${file%.mdc}.md"; done
 4. Consolidation Metadata
 Execute the command below to consolidate the Metadata from each domain service's PRD.txt into the modular-monolith-prompt.txt:
 ```
-cat "modular-monolith-prompt.txt" {{#boundedContexts}}{{#aggregates}}{{nameCamelCase}}/PRD.txt {{/aggregates}}{{/boundedContexts}} > "modular-monolith-prompt.txt.new" && mv "modular-monolith-prompt.txt.new" "modular-monolith-prompt.txt"
+cat "modular-monolith-prompt.txt" {{#boundedContexts}}{{name}}/PRD.txt {{/boundedContexts}} > "modular-monolith-prompt.txt.new" && mv "modular-monolith-prompt.txt.new" "modular-monolith-prompt.txt"
 ```
 
 5. Generate Code
