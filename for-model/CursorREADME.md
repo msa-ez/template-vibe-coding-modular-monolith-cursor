@@ -14,10 +14,16 @@ mkdir -p .cursor/rules
 find vibe-coding-rules -type f -exec mv {} .cursor/rules/ \; && rm -rf vibe-coding-rules
 ```
 
-3. Mode and Model Selection 
+3. LLM Prompt Modification
+Execute the command below to consolidate the Metadata from each domain service's PRD.txt into the LLM Prompt:
+```
+cat "LLM Prompt" {{#aggregate}}{{name}}//PRD.txt{{/aggregate}} > "LLM Prompt.new" && mv "LLM Prompt.new" "LLM Prompt"
+```
+
+4. Mode and Model Selection 
 Press Ctrl + L to activate CursorIDE, then select Agent mode. After that, choose model as claude-3.7-sonnet or claude-3.7-sonnet-max.
 
 <img width="373" alt="Image" src="https://github.com/user-attachments/assets/afe44a5e-458e-4afd-99dc-e44e92953bc1" />
 
-4. Generate Code
-Copy and paste the content from **PRD.txt** into the Cline Prompt Input window to generate your code
+5. Generate Code
+Copy and paste the content from **LLM Prompt** into the Cline Prompt Input window to generate your code
