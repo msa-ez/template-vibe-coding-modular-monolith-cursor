@@ -14,10 +14,10 @@ mkdir -p .cursor/rules
 find vibe-coding-rules -type f -exec mv {} .cursor/rules/ \; && rm -rf vibe-coding-rules
 ```
 
-3. LLM Prompt Modification
-Execute the command below to consolidate the Metadata from each domain service's PRD.txt into the LLM Prompt:
+3. Consolidation Metadata
+Execute the command below to consolidate the Metadata from each domain service's PRD.txt into the modular-monolith-prompt.txt:
 ```
-cat "LLM Prompt" {{#boundedContexts}}{{name}}/PRD.txt {{/boundedContexts}} > "LLM Prompt.new" && mv "LLM Prompt.new" "LLM Prompt"
+cat "modular-monolith-prompt.txt" {{#boundedContexts}}{{name}}/PRD.txt {{/boundedContexts}} > "modular-monolith-prompt.txt.new" && mv "modular-monolith-prompt.txt.new" "modular-monolith-prompt.txt"
 ```
 
 4. Mode and Model Selection 
@@ -26,4 +26,4 @@ Press Ctrl + L to activate CursorIDE, then select Agent mode. After that, choose
 <img width="373" alt="Image" src="https://github.com/user-attachments/assets/afe44a5e-458e-4afd-99dc-e44e92953bc1" />
 
 5. Generate Code
-Copy and paste the content from **LLM Prompt** into the Cline Prompt Input window to generate your code
+Copy and paste the content from **modular-monolith-prompt.txt** into the Cursor Prompt Input window to generate your code

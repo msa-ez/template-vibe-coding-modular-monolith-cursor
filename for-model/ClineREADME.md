@@ -21,11 +21,11 @@ cd .clinerules
 for file in *.mdc; do mv -- "$file" "${file%.mdc}.md"; done
 ```
 
-4. LLM Prompt Modification
-Execute the command below to consolidate the Metadata from each domain service's PRD.txt into the LLM Prompt:
+4. Consolidation Metadata
+Execute the command below to consolidate the Metadata from each domain service's PRD.txt into the modular-monolith-prompt.txt:
 ```
-cat "LLM Prompt" {{#boundedContexts}}{{#aggregates}}{{nameCamelCase}}/PRD.txt {{/aggregates}}{{/boundedContexts}} > "LLM Prompt.new" && mv "LLM Prompt.new" "LLM Prompt"
+cat "modular-monolith-prompt.txt" {{#boundedContexts}}{{#aggregates}}{{nameCamelCase}}/PRD.txt {{/aggregates}}{{/boundedContexts}} > "modular-monolith-prompt.txt.new" && mv "modular-monolith-prompt.txt.new" "modular-monolith-prompt.txt"
 ```
 
 5. Generate Code
-Copy and paste the content from **PRD.txt** into the Cursor Prompt Input window to generate your code
+Copy and paste the content from **modular-monolith-prompt.txt** into the Cline Prompt Input window to generate your code
