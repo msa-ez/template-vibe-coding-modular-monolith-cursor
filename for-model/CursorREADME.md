@@ -17,7 +17,7 @@ find vibe-coding-rules -type f -exec mv {} .cursor/rules/ \; && rm -rf vibe-codi
 3. LLM Prompt Modification
 Execute the command below to consolidate the Metadata from each domain service's PRD.txt into the LLM Prompt:
 ```
-cat "LLM Prompt" {{#aggregate}}{{name}}//PRD.txt{{/aggregate}} > "LLM Prompt.new" && mv "LLM Prompt.new" "LLM Prompt"
+cat "LLM Prompt" {{#aggregates}}{{name}}//PRD.txt{{/aggregates}} > "LLM Prompt.new" && mv "LLM Prompt.new" "LLM Prompt"
 ```
 
 4. Mode and Model Selection 
