@@ -1,5 +1,3 @@
-Please implement a Modular Monolith application for an event storming model-based domain using Spring Boot and DDD Extension. The code must be implemented strictly based on the metadata and rule files provided below.
-
 {{nameCamelCase}} Metadata:
 {{{contexts.json}}}
 
