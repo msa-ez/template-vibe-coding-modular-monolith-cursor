@@ -1,7 +1,6 @@
 ---
-description: 
-globs: 
-alwaysApply: true
+description: This must be used when structuring packages based on requirements requested through PRD. It contains Spring Boot-based project configuration and brief descriptions of the files to be generated.
+alwaysApply: false
 ---
 Please create the project based on the structure below.
 

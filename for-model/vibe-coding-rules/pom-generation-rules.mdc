@@ -1,7 +1,6 @@
 ---
-description: 
-globs: 
-alwaysApply: true
+description: Used as guidelines for pom files to be generated for Root and module-specific configurations.
+alwaysApply: false
 ---
 The POM files generated in the project should be created based on the following requirements and examples.
 

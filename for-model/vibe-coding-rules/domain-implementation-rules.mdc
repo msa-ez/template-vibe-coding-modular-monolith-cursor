@@ -1,9 +1,7 @@
 ---
-description: 
-globs: 
-alwaysApply: true
+description: This provides descriptions and examples for implementing each layer in a modular monolith architecture using Spring Boot and DDD patterns. Files should be configured by referencing this file and leveraging Event Storming model-based Metadata.
+alwaysApply: false
 ---
-
 Please follow the requirements below and refer to the examples when generating domain service classes to configure the internal code.
 
 1) Domain Entity (AggregateRoot.java)
